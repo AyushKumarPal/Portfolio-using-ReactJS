@@ -1,38 +1,378 @@
-.App {
-  text-align: center;
+body{
+  margin : 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  color : white;
+  background-color: #FF8C32;
+}
+
+.left{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding-left: 20px;
+  justify-content: space-between;
+  width : 15vw
+}
+
+.left li img {
+  height: auto;
+  width: 10vw;
+}
+
+.left li p{
+  margin: 0;
+}
+
+.right{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  width: 30vw;
+  justify-content: space-between;
+  padding-left: 0;
+  margin-right: 5vw;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.right li a{
+  color : #06113C;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.4s;
+}
+
+.right li a:hover{
+  color: #DDDDDD;
+}
+
+.intro-section {
+  background-color: #7267CB;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2vh 5vw;
+
+}
+
+.intro-section p {
+  align-content: center;
+  color : #B8E4F0;
+  padding : 2vh 0;
+  font-size : 1.4rem;
+  width : 50vw;
+  margin: 0;
+}
+
+.intro-section img {
+  height: 10vw;
+  width: 10vw;
+  border-radius: 120px;
+}
+
+.skills {
+  background-color: #576F72;
+}
+
+.skills h1{
+  padding: 4vh 0;
+  color : white;
+  font-family: 'Merriweather', serif;
+  margin: 0;
+}
+
+.skills h2 {
+  margin: 0;
+}
+
+.skills .programming h5 {
+  margin: 0;
+}
+
+.projects{
+  background-color: #446fc4;
+}
+
+.projects h1, .education h3, .edu-container h1, .certs h1, .contact h1{
+  margin: 0;
+  padding-top: 3vh;
+}
+
+.education {
+  background-color: #576F72;
+}
+
+
+/* For Cards */
+
+.container {
+  text-align: center;
+	position: relative;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 0;
+}
+
+.container .card {
+	position: relative;
+	width: 300px;
+	height: 400px;
+	background: rgba(255, 255, 255, 0.05);
+	margin: 20px;
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	backdrop-filter: blur(10px);
+}
+
+.container .card .content {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	transition: 0.5s;
+}
+
+.container .card:hover .content {
+	transform: translateY(-20px);
+}
+
+.container .card .content .imgBx {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+}
+
+.container .card .content .imgBx img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.container .card .content .contentBx h3, .Box h3 {
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 500;
+	font-size: 18px;
+	text-align: center;
+	margin: 20px 0 10px;
+	line-height: 1.1em;
+}
+
+.container .card .content .contentBx h3 span, .Box h3 span {
+	font-size: 12px;
+	font-weight: 300;
+	text-transform: initial;
+}
+
+.container .card .sci {
+  padding: 0;
+	position: absolute;
+	bottom: 50px;
+	display: flex;
+}
+
+.container .card .sci li {
+	list-style: none;
+	margin: 0 10px;
+	transform: translateY(40px);
+	transition: 0.5s;
+	opacity: 0;
+}
+
+.container .card:hover .sci li {
+	transform: translateY(0px);
+	opacity: 1;
+}
+
+.container .card .sci li a {
+	font-size: 20px;
+}
+
+.sci li a{
+  margin-right : 0.3rem;
+}
+
+.tech-item{
+  text-decoration: none;
+  font-style: italic;
+  color : #FCF8E8;
+  transition: all 0.5s;
+}
+
+.tech-item:hover{
+  color : #34B3F1;
+}
+
+.Box h3 {
+  padding-top: 2vh;
+} 
+
+.Box h3 a {
+  text-decoration: none;
+  color : #fff;
+}
+
+.proj-item:hover{
+  color : #47B5FF;
+}
+
+.edu-container{
+  padding: 4vh 0;
+  background-color: #062C30;
+}
+
+.projects h1, .edu-container h1{
+  padding-bottom: 3vh;
+  color : white;
+  font-family: 'Merriweather', serif;
+}
+
+.edu-div{
+  display : flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding : 1vh 3vw;
+  margin : 2vh 3vw;
+  background-color: rgba(204, 243, 238, 0.6);
+  border-radius: 15px;
+}
+
+.certification{
+  background-color: red;
+}
+
+.achievements{
+  background-color: green;
+}
+
+.certs{
+  background-color: #B8FFF9;
+  color: #062C30;
+}
+
+.cert-head{
+  color : #005555 !important;
+}
+
+.bottom-container {
+  text-align: center;
+  background-color: #66bfbf;
+  padding: 50px 0 20px;
+}
+
+.footer-link{
+  margin : 0 5vw;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color : #F7FF93;
+}
+
+.copyright{
+color: #eaf6f6;
+font-size: 1rem;
+padding-top : 3vw;
+}
+
+/* For Contact Page */
+form {
+  padding : 2vh 5vw;
+  max-width: 600px;
+  text-align: center;
+  margin: 4vh auto;
+  background-color: #EEEEEE;
+}
+form input,
+form textarea {
+  border: 0;
+  outline: 0;
+  padding: 1em;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  display: block;
+  width: 100%;
+  margin-top: 1em;
+  font-family: "Merriweather", sans-serif;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  resize: none;
+}
+form input:focus,
+form textarea:focus {
+  -moz-box-shadow: 0 0px 2px #e74c3c !important;
+  -webkit-box-shadow: 0 0px 2px #e74c3c !important;
+  box-shadow: 0 0px 2px #e74c3c !important;
+}
+form #input-submit {
   color: white;
+  background: #e74c3c;
+  cursor: pointer;
+}
+form #input-submit:hover {
+  -moz-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+  -webkit-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+  box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
+}
+form textarea {
+  height: 126px;
 }
 
-.App-link {
-  color: #61dafb;
+.half {
+  float: left;
+  width: 48%;
+  margin-bottom: 1em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.right {
+  width: 50%;
+}
+
+.left {
+  margin-right: 2%;
+}
+
+@media (max-width: 480px) {
+  .half {
+    width: 100%;
+    float: none;
+    margin-bottom: 0;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+/* Clearfix */
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+
+.left input{
+  width : 10vw;
+  margin-right: 3vw;
+} 
+
+.right textarea{
 }
